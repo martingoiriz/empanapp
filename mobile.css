@@ -1,0 +1,34 @@
+.counter {
+    padding: 0px;
+    background: #FEB692;
+    background: -webkit-linear-gradient( 135deg, #FEB692 10%, #EA5455 100%);
+    background: -moz-linear-gradient( 135deg, #FEB692 10%, #EA5455 100%);
+    background: linear-gradient( 135deg, #FEB692 10%, #EA5455 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: Calibri, sans-serif;
+    border: 1px hidden black;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-style: hidden hidden solid hidden;
+}
