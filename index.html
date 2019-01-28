@@ -2,14 +2,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+
     <title>Empanapp | MG</title>
 
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 768px)">
+
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
 
 </head>
 
@@ -20,46 +24,48 @@
 
 
 
-        <ul>
+        <div class="total">
+            <h2>Total</h2>
+            <p id="total" class="number"></p>
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col">
+                    <ul id="clickAddMeat">
+                        <h2> Carne</h2>
+                        <li id="countMeat" class="number">0</li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <ul id="clickAddChicken">
+                        <h2>Pollo</h2>
+                        <li id="countChicken" class="number">0</li>
+                    </ul>
+                </div>
+
+                <div class="w-100"></div>
 
 
-            <div class="container">
+                <div class="col">
+                    <ul id="clickAddCheese">
+                        <h2>JyQ</h2>
+                        <li id="countCheese" class="number">0</li>
+                    </ul>
+                </div>
 
-                <li id="meat" class="number">0</li>
-                <li>
-                    <h2> Carne</h2>
-                </li>
-                <li>
-                    <button id="add-meat">+1</button>
-                </li>
+                <div class="col">
+                    <ul id="clickAddVeg">
+                        <h2>Verdura</h2>
+                        <li id="countVeg" class="number">0</li>
+                    </ul>
+                </div>
 
             </div>
 
-            <div class="container">
-
-                <li id="chicken" class="number">0</li>
-                <li>
-                    <h2>Pollo</h2>
-                </li>
-                <li>
-                    <button id="add-chicken">+1</button>
-                </li>
-            </div>
-
-
-
-            <div class="container">
-                <li id="cheese" class="number">0</li>
-                <li>
-                    <h2>JyQ</h2>
-                </li>
-                <li>
-                    <button id="add-cheese">+1</button>
-                </li>
-            </div>
-
-
-        </ul>
+        </div>
 
 
 

@@ -1,36 +1,75 @@
-$(document).ready(function () {
+$(document).ready(function() {
+  // **************************************
+  // ----------------- TOTAL
+  // **************************************
 
-    var counterMeat = 0;
+  var sum = 0;
+  var total = $("#total");
 
-    $("#add-meat").click(function () {
-        counterMeat++;
+  console.log(total);
 
-        $("#meat").text(counterMeat);
-    });
+  // **************************************
+  // ----------------- CARNE
+  // **************************************
+  var clickAddMeat = $("#clickAddMeat");
+  var countMeat = $("#countMeat");
+  var counterMeat = 0;
 
+  clickAddMeat.click(function() {
+    counterMeat++;
+    sum++;
 
+    countMeat.html(counterMeat);
+    total.html(sum);
+  });
 
-    var counterChicken = 0;
+  // **************************************
+  // ----------------- POLLO
+  // **************************************
 
-    $("#add-chicken").click(function () {
-        counterChicken++;
+  var clickAddChicken = $("#clickAddChicken");
+  var countChicken = $("#countChicken");
+  var counterChicken = 0;
 
-        $("#chicken").text(counterChicken);
-    });
+  clickAddChicken.click(function() {
+    counterChicken++;
+    sum++;
 
+    countChicken.html(counterChicken);
+    total.html(sum);
+  });
 
+  // **************************************
+  // ----------------- JAMÓN Y QUESO
+  // **************************************
 
+  var clickAddCheese = $("#clickAddCheese");
+  var countCheese = $("#countCheese");
+  var counterCheese = 0;
 
+  clickAddCheese.click(function() {
+    counterCheese++;
+    sum++;
 
-    var counterCheese = 0;
+    countCheese.html(counterCheese);
+    total.html(sum);
+  });
 
-    $("#add-cheese").click(function () {
-        counterCheese++;
+  // **************************************
+  // ----------------- VERDURA
+  // **************************************
 
-        $("#cheese").text(counterCheese);
-    });
+  var clickAddVeg = $("#clickAddVeg");
+  var countVeg = $("#countVeg");
+  var counterVeg = 0;
 
+  clickAddVeg.click(function() {
+    counterVeg++;
+    sum++;
 
+    countVeg.html(counterVeg);
+    total.html(sum);
+  });
 
-
+  // *****************************************
 });
