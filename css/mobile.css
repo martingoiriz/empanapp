@@ -20,41 +20,39 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px;
-  padding: 10px;
-  border: 0px hidden grey;
-  border-style: hidden hidden hidden hidden;
+  margin-top: 10px;
+  padding: 10px 0;
 }
 .container .row .col {
   margin: 5vh 0;
-}
-.container .row .col ul {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.container .row .col ul h2 {
+.container .row .col h2 {
   font-size: 1.8em;
 }
-.container .row .col ul .number {
+.container .row .col .number {
   border-radius: 50%;
   padding: 26px 32px;
+  background: white;
+  font-size: 1.5em;
+  margin: 3px 0;
 }
 
-.total {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.container h2 {
+  font-size: 1.8em;
 }
-.total p#total {
-  margin: 5px;
+.container #total {
   border-radius: 50%;
-  padding: 15px 22px !important;
+  padding: 26px 32px;
+  background: white;
+  font-size: 1.3em;
+  margin: 3px 0;
 }
-.total .docena {
+.container .docena {
   background: #f7e47e !important;
 }
 
