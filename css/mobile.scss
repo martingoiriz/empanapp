@@ -1,5 +1,4 @@
 .counter {
-  padding: 0px;
   background: #feb692;
   background: -webkit-linear-gradient(135deg, #feb692 10%, #ea5455 100%);
   background: -moz-linear-gradient(135deg, #feb692 10%, #ea5455 100%);
@@ -9,9 +8,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   font-family: Calibri, sans-serif;
-  border: 0px hidden black;
 }
 
 .container {
@@ -47,7 +45,14 @@
   }
 }
 
-.container {
+.container-total {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+
   h2 {
     font-size: 1.8em;
   }
