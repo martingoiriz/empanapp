@@ -7,38 +7,48 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
 
     <title>Empanapp | MG</title>
-    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,800" rel="stylesheet">
 
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
 
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
-
 </head>
 
 <body>
 
+    <div class="container warning">
+        <div class="row">
+            <div class="col-12">
+                <p><b>Esta web app solo se visualiza correctamente desde celulares.</b></p>
+                <p>Para verla desde el navegador:</p>
+                <p>Click derecho -> inspect</p>
+            </div>
+        </div>
+    </div>
+
 
     <section class="counter">
-        <div class="overlay"></div>
-
-        <div class="container-total">
-            <h2>Total</h2>
-            <span id="total" class="number">0</span>
-        </div>
 
         <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Total</h2>
+                    <span id="total" class="number">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
 
             <div class="row">
 
-                <div class="col" id="clickAddMeat">
+                <div class="col-6" id="clickAddMeat">
                     <h2> Carne</h2>
                     <span id="countMeat" class="number">0</span>
                 </div>
 
-                <div class="col" id="clickAddChicken">
+                <div class="col-6" id="clickAddChicken">
                     <h2>Pollo</h2>
                     <span id="countChicken" class="number">0</span>
                 </div>
@@ -46,12 +56,12 @@
                 <div class="w-100"></div>
 
 
-                <div class="col" id="clickAddCheese">
+                <div class="col-6" id="clickAddCheese">
                     <h2>JyQ</h2>
                     <span id="countCheese" class="number">0</span>
                 </div>
 
-                <div class="col" id="clickAddVeg">
+                <div class="col-6" id="clickAddVeg">
                     <h2>Verdura</h2>
                     <span id="countVeg" class="number">0</span>
                 </div>
@@ -59,8 +69,6 @@
             </div>
 
         </div>
-
-
 
     </section>
 
