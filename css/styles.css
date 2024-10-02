@@ -28,8 +28,8 @@
     z-index: 1;
   }
 
-  h2 {
-    font-size: 1.9em;
+  h3 {
+    font-size: 1.3em;
     color: white;
     text-shadow: 1px 1px 10px black;
   }
@@ -79,5 +79,19 @@
 
   .warning {
     display: none;
+  }
+
+  .btn {
+    margin: 1vh 0;
+    padding: 1vh 2vh;
+    font-size: 1.5em;
+    border-radius: 20px;
+    background: rgba(160, 123, 123, 0.516);
+    box-shadow: 2px 2px 4px solid grey;
+    cursor: pointer;
+
+    &:active {
+      background: rgba(160, 123, 123, 0.3);
+    }
   }
 }

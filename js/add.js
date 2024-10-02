@@ -1,75 +1,57 @@
-$(document).ready(function() {
-  // **************************************
-  // ----------------- TOTAL
-  // **************************************
+document.addEventListener('DOMContentLoaded', function() {
+  const itemCounts = {};
 
-  var sum = 0;
-  var total = $("#total");
+  const total = {
+    total: 0,
+    element: document.getElementById('total')
+  };
 
-  console.log(total);
+  function addItem(buttonId, counterId, totalCounter, itemName) {
+    const button = document.getElementById(buttonId);
+    const counter = document.getElementById(counterId);
+    let itemCount = 0;
 
-  // **************************************
-  // ----------------- CARNE
-  // **************************************
-  var clickAddMeat = $("#clickAddMeat");
-  var countMeat = $("#countMeat");
-  var counterMeat = 0;
+    button.addEventListener('click', function() {
+      itemCount++;
+      totalCounter.total++;
+      itemCounts[itemName] = itemCount;
+      counter.textContent = itemCount;
+      totalCounter.element.textContent = totalCounter.total;
+    });
+  }
 
-  clickAddMeat.click(function() {
-    counterMeat++;
-    sum++;
+  addItem('clickAddCarne', 'countFrita', total, 'Carne Frita');
+  addItem('clickAddCarneCuchillo', 'countCarne', total, 'Carne Cuchillo');
+  addItem('clickAddPollo', 'countChicken', total, 'Pollo');
+  addItem('clickAddPolloCrema', 'countPolloCrema', total, 'Pollo a la Crema');
+  addItem('clickAddJyQ', 'countCheese', total, 'Jamon y Queso');
+  addItem('clickAddVerdura', 'countVeg', total, 'Verdura');
+  addItem('clickAddCaprese', 'countCaprese', total, 'Caprese');
+  addItem('clickAddChampi', 'countChampiñon', total, 'Champi');
+  addItem('clickAdd4Quesos', 'count4Quesos', total, '4 Quesos');
+  addItem('clickAddCalabresa', 'countCalabresa', total, 'Calabresa');
+  addItem('clickAddRoque', 'countRoquefort', total, 'Roquefort');
 
-    countMeat.html(counterMeat);
-    total.html(sum);
-  });
+  function copyToClipboard() {
+    const totalValue = total.element.textContent;
 
-  // **************************************
-  // ----------------- POLLO
-  // **************************************
+    let copyText = 'Total: ' + totalValue + '\n' + '\n';
 
-  var clickAddChicken = $("#clickAddChicken");
-  var countChicken = $("#countChicken");
-  var counterChicken = 0;
+    Object.keys(itemCounts).forEach(item => {
+      if (itemCounts[item] > 0) {
+        copyText += `${item}: ${itemCounts[item]}\n` + '\n';
+      }
+    });
 
-  clickAddChicken.click(function() {
-    counterChicken++;
-    sum++;
+    navigator.clipboard.writeText(copyText)
+      .then(() => {
+        console.log('Copied to clipboard:\n', copyText);
+      })
+      .catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+  }
 
-    countChicken.html(counterChicken);
-    total.html(sum);
-  });
-
-  // **************************************
-  // ----------------- JAMÓN Y QUESO
-  // **************************************
-
-  var clickAddCheese = $("#clickAddCheese");
-  var countCheese = $("#countCheese");
-  var counterCheese = 0;
-
-  clickAddCheese.click(function() {
-    counterCheese++;
-    sum++;
-
-    countCheese.html(counterCheese);
-    total.html(sum);
-  });
-
-  // **************************************
-  // ----------------- VERDURA
-  // **************************************
-
-  var clickAddVeg = $("#clickAddVeg");
-  var countVeg = $("#countVeg");
-  var counterVeg = 0;
-
-  clickAddVeg.click(function() {
-    counterVeg++;
-    sum++;
-
-    countVeg.html(counterVeg);
-    total.html(sum);
-  });
-
-  // *****************************************
+  const copyBtn = document.getElementById('copyBtn');
+  copyBtn.addEventListener('click', copyToClipboard);
 });
