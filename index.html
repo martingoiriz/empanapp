@@ -1,103 +1,110 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
 
     <title>Empanapp | MG</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<body>
+  <body>
     <div class="container warning">
-        <div class="row">
-            <div class="col-12">
-                <p><b>Esta web app solo se visualiza correctamente desde celulares.</b></p>
-                <p>Para verla desde el navegador:</p>
-                <p>Click derecho -> inspect</p>
-            </div>
+      <div class="row">
+        <div class="col-12">
+          <p><b>Esta web app solo se visualiza correctamente desde celulares.</b></p>
+          <p>Para verla desde el navegador:</p>
+          <p>Click derecho -> inspect</p>
         </div>
+      </div>
     </div>
 
-
     <section class="counter">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h3>Total</h3>
-                    <span id="total" class="number">0</span>
-                    <button class="btn" id="copyBtn">Copy</button>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3>Total</h3>
+            <span id="total" class="number">0</span>
+            <button class="btn" id="copyBtn">Copy</button>
+          </div>
         </div>
+      </div>
 
-        <div class="container-fluid">
-            <div class="row">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6" id="clickAddCarne">
+            <h3>Carne frita</h3>
+            <span id="countFrita" class="number">0</span>
+          </div>
 
-                <div class="col-6" id="clickAddCarne">
-                    <h3>Carne frita</h3>
-                    <span id="countFrita" class="number">0</span>
-                </div>
+          <div class="col-6" id="clickAddCarneCuchillo">
+            <h3>Carne cuchillo</h3>
+            <span id="countCarne" class="number">0</span>
+          </div>
 
-                <div class="col-6" id="clickAddCarneCuchillo">
-                    <h3>Carne cuchillo</h3>
-                    <span id="countCarne" class="number">0</span>
-                </div>
+          <div class="col-6" id="clickAddPollo">
+            <h3>Pollo</h3>
+            <span id="countChicken" class="number">0</span>
+          </div>
 
-                <div class="col-6" id="clickAddPollo">
-                    <h3>Pollo</h3>
-                    <span id="countChicken" class="number">0</span>
-                </div>
+          <div class="col-6" id="clickAddPolloCrema">
+            <h3>Pollo a la Crema</h3>
+            <span id="countPolloCrema" class="number">0</span>
+          </div>
 
-                <div class="col-6" id="clickAddPolloCrema">
-                    <h3>Pollo a la Crema</h3>
-                    <span id="countPolloCrema" class="number">0</span>
-                </div>
+          <div class="col-6" id="clickAddJyQ">
+            <h3>JyQ</h3>
+            <span id="countCheese" class="number">0</span>
+          </div>
 
-                <div class="col-6" id="clickAddJyQ">
-                    <h3>JyQ</h3>
-                    <span id="countCheese" class="number">0</span>
-                </div>
+          <div class="col-6" id="clickAddVerdura">
+            <h3>Verdura</h3>
+            <span id="countVeg" class="number">0</span>
+          </div>
 
-                <div class="col-6" id="clickAddVerdura">
-                    <h3>Verdura</h3>
-                    <span id="countVeg" class="number">0</span>
-                </div>
+          <div class="col-6" id="clickAddCaprese">
+            <h3>Caprese</h3>
+            <span id="countCaprese" class="number">0</span>
+          </div>
 
-                <div class="col-6" id="clickAddCaprese">
-                    <h3>Caprese</h3>
-                    <span id="countCaprese" class="number">0</span>
-                </div>
+          <div class="col-6" id="clickAddChampi">
+            <h3>Champiñon</h3>
+            <span id="countChampiñon" class="number">0</span>
+          </div>
 
-                <div class="col-6" id="clickAddChampi">
-                    <h3>Champiñon</h3>
-                    <span id="countChampiñon" class="number">0</span>
-                </div>
+          <div class="col-6" id="clickAdd4Quesos">
+            <h3>4 Quesos</h3>
+            <span id="count4Quesos" class="number">0</span>
+          </div>
 
-                <div class="col-6" id="clickAdd4Quesos">
-                    <h3>4 Quesos</h3>
-                    <span id="count4Quesos" class="number">0</span>
-                </div>
+          <div class="col-6" id="clickAddCalabresa">
+            <h3>Calabresa</h3>
+            <span id="countCalabresa" class="number">0</span>
+          </div>
 
-                <div class="col-6" id="clickAddCalabresa">
-                    <h3>Calabresa</h3>
-                    <span id="countCalabresa" class="number">0</span>
-                </div>
+          <div class="col-6" id="clickAddRoque">
+            <h3>Roquefort</h3>
+            <span id="countRoquefort" class="number">0</span>
+          </div>
 
-                <div class="col-6" id="clickAddRoque">
-                    <h3>Roquefort</h3>
-                    <span id="countRoquefort" class="number">0</span>
-                </div>
+          <div class="col-6" id="clickAddPanceta">
+            <h3>Panceta y Ciru</h3>
+            <span id="countPanceta" class="number">0</span>
+          </div>
 
-            </div>
-
+          <div class="col-6" id="clickAddVerdura">
+            <h3>Verdura</h3>
+            <span id="countVerdura" class="number">0</span>
+          </div>
         </div>
+      </div>
     </section>
 
     <script src="js/add.js"></script>
-</body>
-
+  </body>
 </html>
